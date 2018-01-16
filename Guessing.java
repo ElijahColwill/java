@@ -14,9 +14,9 @@ class Guessing {
 				i = 8;
 				System.out.println("Congrats, You Win!");
 			} else if (x > r) {
-				System.out.println("Your too high! Guess Again");
+				System.out.println("You're too high! Guess Again.");
 			} else if (x < r) {
-				System.out.println("Your too low! Guess again");
+				System.out.println("You're too low! Guess Again.");
 			}
 		}
 		System.out.println("Game Over.");
