@@ -11,7 +11,7 @@ class YourTheBest {
 			str = str + "!";
 		}
 
-		for (int i=0; i <= n; i++) {
+		for (int i=0; i < n; i++) {
 			System.out.println("YOU'RE THE BEST" + str);
 		}
 
