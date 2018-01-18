@@ -15,13 +15,32 @@ class Switch {
 		String temporary = "TEMPORARY";
 
 		for (int i = 0; i < str.length(); i++){
-			search = str.substring(i, i+strSwitch1.length());
-			if (str.equal(search)) {
-				str = str(0, i) + temporary + str(i+strSwitch1.length());
+			if (i <= (str.length() - strSwitch1.length())) {
+				String search = str.substring(i, i+strSwitch1.length());
+				if (search.equals(strSwitch1)) {
+					str = str.substring(0, i) + temporary + str.substring(i+strSwitch1.length(), str.length());
+				}
 			}
 		}
 
-		System.out.println(str);
+		for (int i = 0; i < str.length(); i++){
+			if (i <= ((str.length()) - strSwitch2.length())) {
+				String search = str.substring(i, i+strSwitch2.length());
+				if (search.equals(strSwitch2)) {
+					str = str.substring(0, i) + strSwitch1 + str.substring(i+strSwitch2.length(), str.length());
+				}
+			}
+		}
+
+		for (int i = 0; i < str.length(); i++){
+			if (i <= (str.length() - temporary.length())) {
+				String search = str.substring(i, i+temporary.length());
+				if (search.equals(temporary)) {
+					str = str.substring(0, i) + strSwitch2 + str.substring(i+temporary.length(), str.length());
+				}
+			}
+		}
+
 		return str;
 
 
